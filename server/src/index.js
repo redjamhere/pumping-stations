@@ -10,5 +10,12 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.listen(config.port, () => {`App started on ${config.port}`})
+app.get('/posts', (req, res) => {
+    res.send({
+        title: 'oh shit',
+        description: 'dweqf'
+    })
+})
+
+app.listen(process.env.PORT || config.port, () => {console.log(`Server start on port ${config.port} ...`)})
 
