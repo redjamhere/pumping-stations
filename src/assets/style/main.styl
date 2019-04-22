@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu')
+
+*
+  padding 0
+  margin 0
+  font-family 'Ubuntu', sans-serif
+
+.wrapper 
+  width 100%
+  height 100%
+  position relative
+
+.header
+  width 100%
+
+.navbar
+  height 100%
+  
+.navbar-content
+  display flex
+  height 70px
+  align-items center
+  width 100%
+  justify-content space-between
+
+.profile-logo
+  padding 40px
+  font-size 18px
+  text-decoration none 
+  color #2d3436
+  @media screen and (max-width 768px)
+    display none
+
+.header-logo
+  padding 40px
+  font-size 18px
+  text-decoration none 
+  color #2d3436
+  display none
+  @media screen and (max-width 768px)
+    display block
+
+.navbar-list_wrapper
+  @media screen and (max-width 768px)
+    display none
+
+    &.active
+      display block
+
+.navbar-list
+  display flex
+  list-style none
+  :last-child
+    padding-right 10px
+  @media screen and (max-width 768px)
+    flex-direction column
+    width 40%
+    position fixed
+    top 0
+    box-shadow 0 0 10px gray
+    height 100%
+    :last-child
+      padding-right 0
+
+
+.navbar-link
+  padding 25px
+  color #636e72
+  text-decoration none
+  transition 0.2s ease
+  @media screen and (max-width 768px)
+    padding 30px 0px 30px 20px
+    color black
+    display block
+    font-size 18px
+    
+
+.navbar-link:hover 
+  color #2d3436
+
+
+.line 
+  background #000
+  clear left
+  float left 
+  height 3px
+  margin-bottom 5px
+  transition all .2s
+  width: 25px
+
+  &:last-child 
+    margin-bottom 0
+
+.button-burger 
+  margin-left 40px
+  position: relative
+  width: 25px;
+  height: 16px;
+  z-index 30
+  -webkit-transform: rotate(0deg)
+  -ms-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: 0.5s ease-in-out
+  -o-transition: 0.5s ease-in-out
+  transition: 0.5s ease-in-out
+  cursor: pointer
+  display none
+  @media screen and (max-width 768px)
+    display block
+
+.button-burger.active 
+  float right 
+
+
+.button-burger_wrapper
+  width 50%
+
+.button-burger:hover .line-1,
+.button-burger:focus .line-1 
+  -webkit-transform: translateY(-1px)
+  -ms-transform: translateY(-1px)
+  transform: translateY(-1px)
+
+.button-burger:hover .line-3,
+.button-burger:focus .line-3 
+  -webkit-transform: translateY(1px)
+  -ms-transform: translateY(1px)
+  transform: translateY(1px)
+
+.button-burger.active .line-1 
+  -webkit-transform: translateY(8.33px) translateX(0) rotate(45deg)
+  -ms-transform: translateY(8.33px) translateX(0) rotate(45deg)
+  transform: translateY(8.33px) translateX(0) rotate(45deg)
+
+.button-burger.active .line-2 
+  opacity: 0;
+
+.button-burger.active .line-3 
+  -webkit-transform: translateY(-8.33px) translateX(0) rotate(-45deg)
+  -ms-transform: translateY(-8.33px) translateX(0) rotate(-45deg)
+  transform: translateY(-8.33px) translateX(0) rotate(-45deg)
+
+.button-burger .line 
+  display: block
+  position: absolute
+  height: 2px
+  width: 100%
+  background-color: #333
+  border-radius: 4px
+  opacity: 1
+  left: 0
+  -webkit-transform: rotate(0deg)
+  -ms-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1)
+  -o-transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1)
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1)
+
+.button-burger .line.line--white 
+  background-color: #fff
+
+.button-burger .line-1 
+  top: 0%
+
+.button-burger .line-2 
+  top: 50%
+
+.button-burger .line-3 
+  top: 100%
+
+  
