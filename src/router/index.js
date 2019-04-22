@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
+import Home from '@/components/home'
 import Login from '@/components/Auth/login'
 import Registration from '@/components/Auth/registration'
 import Calculate from '@/components/calculate'
