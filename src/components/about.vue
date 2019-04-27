@@ -1,14 +1,14 @@
 <template lang="pug">
   .content-wrapper
     section
-      .container ААААнудавай
+      .container {{text}}
 </template>
 
 <script>
 export default {
   data () {
     return {
-      text: 'Home page'
+      text: 'Старый жмых Займановский'
     }
   }
 }

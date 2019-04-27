@@ -22,9 +22,10 @@
             router-link.profile-logo(to='/login')
               font-awesome-icon(icon="user")
             router-link.header-logo(to='/home') Карманный расчет
-      .header-content
-
-      .content-wrapper
+    .content-wrapper
+      router-view
+    .footer
+      span {{authorName}}
 </template>
 
 <script>
@@ -32,11 +33,13 @@ export default {
   name: 'App',
   data () {
     return {
+      authorName: 'Курсовую работу выполнил Займанов Айнур ИС-162',
       menuShow: false,
       linkMenu: [
+        {title: 'Главная', url: '/'},
         {title: 'Расчеты', url: '/calculate'},
         {title: 'Документация', url: '/doc'},
-        {title: 'Об авторе', url: '/login'}
+        {title: 'Об авторе', url: '/about'}
       ]
     }
   },
